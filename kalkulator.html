@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Kombinatorial</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/Index dan Kalkulator.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #b2cdff; /* Warna latar belakang */
+        }
+
+        h1, h2 {
+            color: #343a40; /* Warna teks */
+        }
+
+        footer {
+            background-color: #343a40; /* Warna latar belakang footer */
+            color: white; /* Warna teks footer */
+            padding: 20px 0;
+            margin-top: 40px; /* Jarak atas footer */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-kustom shadow-sm fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand nav-link" href="index.html">KOMBINATORIAL</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Kembali</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Materi</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="pengertian.html">Pengertian</a></li>
+                            <li><a class="dropdown-item" href="kaidah_penjumlahan.html">Kaidah Penjumlahan & Perkalian</a></li>
+                            <li><a class="dropdown-item" href="notasi.html">Notasi Faktorial</a></li>
+                            <li><a class="dropdown-item" href="koebin.html">Koefisien Binomial</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Kuis</a>
+                        <ul class="dropdown-menu">
+                            
+                            <li><a class="dropdown-item " href="kuis-kaidah.html">Kaidah Penjumlahan & Perkalian</a></li>
+                            <li><a class="dropdown-item" href="kuis-notasi.html">Notasi Faktorial</a></li>
+                            <li><a class="dropdown-item" href="kuis-koebin.html">Koefisien Binomial</a></li>
+                        </ul>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a class="nav-link active" href="kalkulator.html">Kalkulator</a>
+                    </li>
+
+                    
+
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="tentang.html" >Tentang Kami</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Kalkulator Kaidah Penjumlahan -->
+
+    <div class="container mt-4 calculator-container penjumlahan" style="padding: 70px;" style="padding-top: 3rem;">
+        <h1 style="font-weight: bold;">Kalkulator Kaidah <span style="color: red;">Penjumlahan</span></h1>
+        <p style="color: #007bff">Masukkan dua nilai dari masing-masing kemungkinan untuk menghitung hasil penjumlahan.</p>
+    
+        <div class="mb-3">
+            <label for="setA" class="form-label">Jumlah Kemungkinan dari Percobaan 1:</label>
+            <input type="number" class="form-control" id="setA" placeholder="Masukan Jumlah Kemungkinan dari Percobaan 1">
+        </div>
+    
+        <div class="mb-3">
+            <label for="setB" class="form-label">Jumlah Kemungkinan dari Percobaan 2:</label>
+            <input type="number" class="form-control" id="setB" placeholder="Masukan Jumlah Kemungkinan dari Percobaan 2">
+        </div>
+    
+        <button class="btn btn-primary" id="calculateSumBtn">Hitung</button>
+
+    
+        <h2 class="mt-4">Total Kemungkinan: <span style="color: red;"><span id="result">0</span></span></h2>
+        <h2 class="mt-4" style="text-align: left; font-size:x-large;">Hasilnya di Dapat dari:</h2>
+        <div id="stepsSum" style="background: #f8f9fa; padding: 15px; border-radius: 5px; border: 1px solid #ddd;"></div>
+        
+    </div>
+
+    <br><br><br>
+    <hr style="border-top: 2px solid; margin: 30px 0;">
+
+    <!-- Kalkulator Kaidah Perkalian -->
+    <div class="container mt-4 calculator-container perkalian" style="padding: 70px;">
+        <h1 style="font-weight: bold;">Kalkulator Kaidah <span style="color: orange;">Perkalian</span></h1>
+        <p style="color: #007bff">Masukkan dua nilai dari masing-masing kemungkinan untuk menghitung hasil perkalian.</p>
+    
+        <div class="mb-3">
+            <label for="multiplyA" class="form-label">Jumlah Kemungkinan dari Percobaan 1:</label>
+            <input type="number" class="form-control" id="multiplyA" placeholder="Masukan Jumlah Kemungkinan dari Percobaan 1">
+        </div>
+    
+        <div class="mb-3">
+            <label for="multiplyB" class="form-label">Jumlah Kemungkinan dari Percobaan 2:</label>
+            <input type="number" class="form-control" id="multiplyB" placeholder="Masukan Jumlah Kemungkinan dari Percobaan 2">
+        </div>
+    
+        <button class="btn btn-primary" id="calculateMultiplyBtn">Hitung</button>
+
+    
+        <h2 class="mt-4">Total Kemungkinan: <span style="color: orange;"><span id="multiplyResult">0</span></span></h2>
+        <h2 class="mt-4" style="text-align: left; font-size:x-large;">Hasilnya di Dapat dari:</h2>
+<div id="stepsMultiply" style="background: #f8f9fa; padding: 15px; border-radius: 5px; border: 1px solid #ddd;"></div>
+
+    </div>
+
+    <br><br><br>
+    <hr style="border-top: 2px solid; margin: 30px 0;">
+
+    <!-- Kalkulator Notasi Faktorial -->
+    <div class="container mt-4 calculator-container faktorial"  style="padding: 70px;">
+        <h1 style="font-weight: bold;">Kalkulator Notasi <span style="color:yellow; ">Faktorial</span></h1>
+        <p style="color: #007bff">Masukkan nilai untuk menghitung faktorial dari angka tersebut.</p>
+    
+        <div class="mb-3">
+            <label for="factorialInput" class="form-label">Masukkan Angka:</label>
+            <input type="number" class="form-control" id="factorialInput" placeholder="Masukkan Angka untuk dihitung faktorialnya">
+        </div>
+    
+        <button class="btn btn-primary" id="calculateFactorialBtn">Hitung</button>
+
+    
+        <h2 class="mt-4">Hasil Faktorial:<span style="color:yellow;"><span id="factorialResult">0</span></span></h2>
+        <h2 class="mt-4" style="text-align: left; font-size:x-large;">Hasilnya di Dapat dari:</h2>
+<div id="stepsFactorial" style="background: #f8f9fa; padding: 15px; border-radius: 5px; border: 1px solid #ddd;"></div>
+
+    </div>
+
+    <br><br><br>
+    <hr style="border-top: 2px solid; margin: 30px 0;">
+
+    <!-- Kalkulator Koefisien Binomial -->
+    <div class="container mt-4 calculator-container binomial" style="padding: 70px;">
+        <h1 style="font-weight: bold;">Kalkulator Koefisien <span style="color:green;">Binomial</span></h1>
+        <p style="color: #007bff">Masukkan dua nilai (n dan k) untuk menghitung koefisien binomial.</p>
+    
+        <div class="mb-3">
+            <label for="nInput" class="form-label">Masukkan n:</label>
+            <input type="number" class="form-control" id="nInput" placeholder="Masukkan nilai n">
+        </div>
+    
+        <div class="mb-3">
+            <label for="kInput" class="form-label">Masukkan k:</label>
+            <input type="number" class="form-control" id="kInput" placeholder="Masukkan nilai k">
+        </div>
+    
+        <button class="btn btn-primary" id="calculateBinomialBtn">Hitung</button>
+
+    
+        <h2 class="mt-4">Koefisien Binomial: <span style="color:green;"><span id="binomialResult">0</span></span></h2>
+        <h2 class="mt-4" style="text-align: left; font-size:x-large;">Hasilnya di Dapat dari:</h2>
+<div id="stepsBinomial" style="background: #f8f9fa; padding: 15px; border-radius: 5px; border: 1px solid #ddd;"></div>
+
+    </div>
+
+    <br><br><br>
+    <hr style="border-top: 2px solid; margin: 30px 0;">
+    <div class="container mt-4 calculator-container binomial" style="padding: 90px; margin-bottom: 60px;">
+        <h2 style="color: #007bff; font-weight: bold; border-bottom: 3px solid #007bff; padding-bottom: 10px;">Tutorial Kalkulator Kombinatorial</h2>
+        <br>
+        <div style="display: flex; justify-content: center; align-items: center;">
+            <iframe width="93%" height="520" src="https://www.youtube.com/embed/Xkbi_jXfzNs" frameborder="0" allowfullscreen></iframe>
+        </div>
+        
+    </div>
+    
+
+
+
+        
+
+
+
+
+
+
+
+    <footer class="footer footer-kustom mt-4">
+        <div class="container-fluid" style="padding-left: 14vh; padding-right: 10vh;">
+            <div class="row">
+
+                <div class="col-md-6 footer-section">
+                    <h5 style="color: white;">Tambahan Referensi</h5>
+                    <ul>
+                        <li><a href="https://kumparan.com/berita-hari-ini/apa-itu-kombinatorika-ini-penjelasan-dan-contoh-soalnya-1yrVJeJCv0n" style="color: rgb(143, 143, 255);">Pengertian Kombinatorial</a></li>
+                        <li><a href="http://elitabmas.wisnuwardhana.ac.id/webmin/assets/uploads/lf/LF202106171623883388461.pdf" style="color: rgb(143, 143, 255);">Kaidah Penjumlahan & Perkalian</a></li>
+                        <li><a href="https://journal.um-surabaya.ac.id/didaktis/article/view/4794/3202" style="color: rgb(143, 143, 255);">Notasi Faktorial</a></li>
+                        <li><a href="https://journal.um-surabaya.ac.id/didaktis/article/view/4794/3202" style="color: rgb(143, 143, 255);">Permutasi & Kombinasi</a></li>
+                        <li><a href="http://etheses.uin-malang.ac.id/58268/" style="color: rgb(143, 143, 255);">Koefisien Binomial</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-md-6 footer-section text-center">
+                    <p>&copy; 2024 Kombinatorial | Dibuat oleh Kelompok 3 Matematika Diskrit</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Kalkulator Kaidah Penjumlahan
+document.getElementById('calculateSumBtn').addEventListener('click', function () {
+    const setA = parseInt(document.getElementById('setA').value) || 0;
+    const setB = parseInt(document.getElementById('setB').value) || 0;
+    const result = setA + setB;
+
+    document.getElementById('result').textContent = result;
+    document.getElementById('stepsSum').innerHTML = `
+        <p>Percobaan 1 = ${setA}</p>
+        <p>Percobaan 2 = ${setB}</p>
+        <p>Total = ${setA} + ${setB} = ${result}</p>
+    `;
+});
+
+// Kalkulator Kaidah Perkalian
+document.getElementById('calculateMultiplyBtn').addEventListener('click', function () {
+    const multiplyA = parseInt(document.getElementById('multiplyA').value) || 0;
+    const multiplyB = parseInt(document.getElementById('multiplyB').value) || 0;
+    const multiplyResult = multiplyA * multiplyB;
+
+    document.getElementById('multiplyResult').textContent = multiplyResult;
+    document.getElementById('stepsMultiply').innerHTML = `
+        <p>Percobaan 1 = ${multiplyA}</p>
+        <p>Percobaan 2 = ${multiplyB}</p>
+        <p>Total = ${multiplyA} × ${multiplyB} = ${multiplyResult}</p>
+    `;
+});
+
+// Kalkulator Notasi Faktorial
+document.getElementById('calculateFactorialBtn').addEventListener('click', function () {
+    const num = parseInt(document.getElementById('factorialInput').value) || 0;
+    let factorial = 1;
+    let steps = `${num}! = `;
+
+    for (let i = num; i > 0; i--) {
+        factorial *= i;
+        steps += (i === 1 ? `${i} = ${factorial}` : `${i} × `);
+    }
+
+    document.getElementById('factorialResult').textContent = factorial;
+    document.getElementById('stepsFactorial').innerHTML = `<p>${steps}</p>`;
+});
+
+// Kalkulator Koefisien Binomial
+document.getElementById('calculateBinomialBtn').addEventListener('click', function () {
+    const n = parseInt(document.getElementById('nInput').value) || 0;
+    const k = parseInt(document.getElementById('kInput').value) || 0;
+
+    if (k > n) {
+        document.getElementById('binomialResult').textContent = "Invalid input (k cannot be greater than n)";
+        document.getElementById('stepsBinomial').innerHTML = "";
+        return;
+    }
+
+    let nFactorial = 1, kFactorial = 1, nMinusKFactorial = 1;
+    for (let i = 1; i <= n; i++) nFactorial *= i;
+    for (let i = 1; i <= k; i++) kFactorial *= i;
+    for (let i = 1; i <= (n - k); i++) nMinusKFactorial *= i;
+
+    const binomial = nFactorial / (kFactorial * nMinusKFactorial);
+
+    document.getElementById('binomialResult').textContent = binomial;
+    document.getElementById('stepsBinomial').innerHTML = `
+        <p>C(${n}, ${k}) = ${n}! / (${k}! × (${n} - ${k})!)</p>
+        <p>= ${nFactorial} / (${kFactorial} × ${nMinusKFactorial})</p>
+        <p>= ${binomial}</p>
+    `;
+});
+
+
+
+
+
+
+        //Java Untuk Ad Efek Transisi Di Kalkulator//
+        document.getElementById('result').classList.add('show');
+
+
+
+    </script>
+
+</body>
+</html>

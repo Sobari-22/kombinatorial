@@ -1,0 +1,239 @@
+/* Global Styles */
+body {
+    overflow-x: hidden; /* Mencegah scroll horizontal */
+    background-color: #b2cdff; /* Warna latar belakang */
+    font-family: 'Arial', sans-serif; /* Font keluarga */
+}
+
+/* Full Image */
+.full-image {
+    width: 100%; /* Gambar full width */
+    max-height: 80vh; /* Batas tinggi agar tidak terlalu besar */
+    object-fit: cover; /* Mempertahankan proporsi */
+    display: block;
+    margin: 0 auto; /* Gambar rata tengah */
+}
+
+/* Text Centering */
+h2 {
+    text-align: center;
+}
+
+/* Materi Items */
+.materi-item {
+    background-color: #f8f9fa; /* Warna latar belakang */
+    border: 1px solid #dee2e6; /* Border */
+    border-radius: 10px; /* Sudut melengkung */
+    padding: 15px; /* Padding */
+    margin-bottom: 20px; /* Jarak antar item */
+    text-align: center; /* Rata tengah */
+    transition: transform 0.2s, box-shadow 0.2s ease-in-out; /* Efek transisi */
+}
+
+.materi-item:hover {
+    transform: scale(1.05); /* Efek zoom saat hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Bayangan saat hover */
+}
+
+/* Scrollable Section */
+.scrollable-section {
+    max-height: 80vh; /* Batas tinggi area konten untuk scroll */
+    overflow-y: auto; /* Aktifkan scroll vertikal jika konten melebihi */
+    padding: 10px;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #f8f9fa; /* Warna latar footer */
+    padding: 20px 0;
+    border-top: 1px solid #ddd;
+}
+
+.footer .footer-section {
+    margin-bottom: 20px;
+}
+
+.footer .footer-section h5 {
+    color: #343a40; /* Warna teks heading footer */
+    font-weight: bold; /* Membuat heading footer lebih tebal */
+}
+
+.footer .footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer .footer-section ul li {
+    margin-bottom: 5px;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Vertically align content */
+    text-align: center;
+    height: 100%; /* Ensure parent has full height */
+}
+
+.centered-list {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    text-align: left; /* Left align list text */
+}
+
+/* Custom Footer Colors */
+.footer-kustom {
+    background-color: #343a40; /* Dark gray color */
+    color: white;
+}
+
+.footer-kustom .container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.footer-kustom a {
+    color: #f8f9fa; /* Bright white color */
+    text-decoration: none; /* Menghilangkan garis bawah pada link */
+}
+
+.footer-kustom a:hover {
+    color: #e9ecef; /* Light gray color on hover */
+    text-decoration: underline; /* Garis bawah saat hover */
+}
+
+/* Navbar Customization */
+.navbar-kustom {
+    background-color: #343a40; /* Custom navbar color */
+}
+
+.navbar-kustom .navbar-brand,
+.navbar-kustom .nav-link {
+    color: rgb(255, 255, 255); /* White text color */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Transisi pada warna dan latar belakang */
+}
+
+/* Hover Effect for Navbar Links */
+.navbar-kustom .nav-link:hover {
+    color: #007bff; /* Warna biru saat hover */
+    background-color: rgba(255, 255, 255, 0.1); /* Efek latar belakang transparan saat hover */
+    border-radius: 5px; /* Membulatkan sudut pada link saat hover */
+}
+
+/* Active state for "Tentang Kami" */
+.navbar-kustom .nav-link.active {
+    color: #007bff; /* Warna biru saat link aktif */
+    
+}
+
+/* Dropdown menu item hover */
+.navbar-kustom .dropdown-menu .dropdown-item:hover {
+    background-color: #007bff; /* Latar belakang biru untuk item dropdown */
+    color: white; /* Mengubah warna teks menjadi putih */
+}
+
+/* Carousel Styles */
+.carousel-item {
+    position: relative;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Gradiasi hitam di bagian bawah gambar */
+.carousel-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%; /* Atur tinggi gradiasi sesuai keinginan */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+    z-index: 1; /* Gradiasi berada di bawah teks */
+}
+
+/* Pastikan caption berada di atas gradiasi */
+.carousel-caption {
+    position: absolute;
+    bottom: 0; /* Posisi caption di bawah gambar */
+    left: 0;
+    width: 100%;
+    z-index: 2; /* Teks di atas gradiasi */
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* Menyembunyikan indikator slide (tiga bar di bawah gambar) */
+.carousel-indicators {
+    display: none; /* Menyembunyikan indikator */
+}
+
+/* Button Hover Effect */
+.btn-primary {
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transisi untuk latar belakang dan ukuran */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Mengubah warna latar belakang saat hover */
+    transform: scale(1.1); /* Memperbesar ukuran tombol sedikit */
+}
+
+/* Text Shadow Effect */
+h1, h2 {
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* Bayangan pada teks */
+}
+
+.result {
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3); /* Bayangan pada hasil kalkulasi */
+}
+
+
+
+/*Efek Untuk Kalkulaotr KOntainer*/
+                                        
+    .calculator-container {
+        border-radius: 10px; /* Sudut melengkung */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+        
+    }
+
+    /* Kalkulator Penjumlahan */
+    .penjumlahan {
+        background-color: #d8e6ff; /* Biru pastel */
+        border: 2px solid #b0c7ff; /* Border biru lebih gelap */
+    }
+
+    /* Kalkulator Perkalian */
+    .perkalian {
+        background-color: #dfebff; /* Biru pastel */
+        border: 2px solid #bacdff; /* Border biru lebih gelap */
+    }
+
+    /* Kalkulator Faktorial */
+    .faktorial {
+        background-color: #d8e6ff; /* Biru pastel */
+        border: 2px solid #b0c7ff; /* Border biru lebih gelap */
+    }
+
+    /* Kalkulator Binomial */
+    .binomial {
+        background-color: #dfebff; /* Biru pastel */
+        border: 2px solid #bacdff; /* Border biru lebih gelap */
+    }
+
+
+    ::-webkit-scrollbar{
+        width: 10px;
+    }
+    
+    ::-webkit-scrollbar-thumb{
+        border-radius: 20px;
+        background-color: #ff511c;
+    }                                    
+                                        

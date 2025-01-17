@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengertian Kombinatorial</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styleTentang.css">
+    
+    <style>
+/* Global Styles */
+body {
+    overflow-x: hidden; /* Mencegah scroll horizontal */
+    background-color: #b2cdff; /* Warna latar belakang */
+    font-family: 'Arial', sans-serif; /* Font keluarga */
+}
+
+/* Full Image */
+.full-image {
+    width: 100%; /* Gambar full width */
+    max-height: 80vh; /* Batas tinggi agar tidak terlalu besar */
+    object-fit: cover; /* Mempertahankan proporsi */
+    display: block;
+    margin: 0 auto; /* Gambar rata tengah */
+}
+
+/* Text Centering */
+h2 {
+    text-align: center;
+}
+
+/* Materi Items */
+ .content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+/* Scrollable Section */
+.scrollable-section {
+    max-height: 80vh; /* Batas tinggi area konten untuk scroll */
+    overflow-y: auto; /* Aktifkan scroll vertikal jika konten melebihi */
+    padding: 10px;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #f8f9fa; /* Warna latar footer */
+    padding: 20px 0;
+    border-top: 1px solid #ddd;
+}
+
+.footer .footer-section {
+    margin-bottom: 20px;
+}
+
+.footer .footer-section h5 {
+    color: #343a40; /* Warna teks heading footer */
+    font-weight: bold; /* Membuat heading footer lebih tebal */
+}
+
+.footer .footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer .footer-section ul li {
+    margin-bottom: 5px;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Vertically align content */
+    text-align: center;
+    height: 100%; /* Ensure parent has full height */
+}
+
+.centered-list {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    text-align: left; /* Left align list text */
+}
+
+/* Custom Footer Colors */
+.footer-kustom {
+    background-color: #343a40; /* Dark gray color */
+    color: white;
+}
+
+.footer-kustom .container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.footer-kustom a {
+    color: #f8f9fa; /* Bright white color */
+    text-decoration: none; /* Menghilangkan garis bawah pada link */
+}
+
+.footer-kustom a:hover {
+    color: #e9ecef; /* Light gray color on hover */
+    text-decoration: underline; /* Garis bawah saat hover */
+}
+
+/* Navbar Customization */
+.navbar-kustom {
+    background-color: #343a40; /* Custom navbar color */
+}
+
+.navbar-kustom .navbar-brand,
+.navbar-kustom .nav-link {
+    color: rgb(255, 255, 255); /* White text color */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Transisi pada warna dan latar belakang */
+}
+
+/* Hover Effect for Navbar Links */
+.navbar-kustom .nav-link:hover {
+    color: #007bff; /* Warna biru saat hover */
+    background-color: rgba(255, 255, 255, 0.1); /* Efek latar belakang transparan saat hover */
+    border-radius: 5px; /* Membulatkan sudut pada link saat hover */
+}
+
+
+/* Active state for "Tentang Kami" */
+.navbar-kustom .nav-link.active {
+    color: #007bff; /* Warna biru saat link aktif */
+    
+}
+.navbar-kustom .activePutih {
+    background-color: #7abaff;
+    
+}
+
+
+/* Dropdown menu item hover */
+.navbar-kustom .dropdown-menu .dropdown-item:hover {
+    background-color: #007bff; /* Latar belakang biru untuk item dropdown */
+    color: white; /* Mengubah warna teks menjadi putih */
+}
+
+/* Carousel Styles */
+.carousel-item {
+    position: relative;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Gradiasi hitam di bagian bawah gambar */
+.carousel-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%; /* Atur tinggi gradiasi sesuai keinginan */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+    z-index: 1; /* Gradiasi berada di bawah teks */
+}
+
+/* Pastikan caption berada di atas gradiasi */
+.carousel-caption {
+    position: absolute;
+    bottom: 0; /* Posisi caption di bawah gambar */
+    left: 0;
+    width: 100%;
+    z-index: 2; /* Teks di atas gradiasi */
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    border-radius: 20px;
+    background-color: #ff511c;
+}
+    </style>
+    
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-kustom shadow-sm fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand nav-link " href="index.html">KOMBINATORIAL</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link " href="index.html">Kembali</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Materi</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item activePutih" href="pengertian.html">Pengertian</a></li>
+                            <li><a class="dropdown-item" href="kaidah_penjumlahan.html">Kaidah Penjumlahan & Perkalian</a></li>
+                            <li><a class="dropdown-item" href="notasi.html">Notasi Faktorial</a></li>
+                            <li><a class="dropdown-item" href="koebin.html">Koefisien Binomial</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Kuis</a>
+                        <ul class="dropdown-menu">
+                            
+                            <li><a class="dropdown-item " href="kuis-kaidah.html">Kaidah Penjumlahan & Perkalian</a></li>
+                            <li><a class="dropdown-item" href="kuis-notasi.html">Notasi Faktorial</a></li>
+                            <li><a class="dropdown-item" href="kuis-koebin.html">Koefisien Binomial</a></li>
+                        </ul>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a class="nav-link " href="kalkulator.html">Kalkulator</a>
+                    </li>
+
+                    
+
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="tentang.html" >Tentang Kami</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section>
+    <div class="content" style="padding-top: 3rem;">
+        <img src="img/pengertian.jpg" alt="Pengertian Matematika Kombinatorial">
+        <h3>Definisi Kombinatorial</h3>
+        <p>Kombinatorial adalah studi tentang pengaturan, pemilihan, dan penghitungan objek dalam suatu himpunan. Ini mencakup berbagai teknik dan metode untuk menghitung jumlah cara yang mungkin untuk mengatur atau memilih objek, baik dengan atau tanpa memperhatikan urutan.</p>
+
+        <h3>Matematika Kombinatorial</h3>
+        <p>Matematika kombinatorial adalah cabang dari Matematika yang mempelajari cara-cara memilih, menyusun, dan mengatur elemen-elemen dalam suatu himpunan, biasanya dengan memperhitungkan syarat-syarat tertentu. Kombinatorika berkaitan dengan memperhitungkan (kombinasi dan permutasi), menyusun objek secara teratur, dan menganalisis struktur yang mungkin terbentuk.</p>
+
+        <h3>Prinsip Dasar Kombinatorial</h3>
+        <p>Terdapat beberapa prinsip dasar dalam kombinatorial, antara lain:</p>
+        <ul>
+            <li><strong>Prinsip Penjumlahan:</strong> Jika ada dua cara untuk melakukan suatu tugas, dan cara-cara tersebut tidak saling tumpang tindih, maka jumlah total cara untuk melakukan tugas tersebut adalah jumlah dari kedua cara tersebut.</li>
+            <li><strong>Prinsip Perkalian:</strong> Jika suatu tugas dapat dilakukan dengan cara A dan cara B, maka jumlah total cara untuk melakukan tugas tersebut adalah hasil kali dari jumlah cara A dan jumlah cara B.</li>
+        </ul>
+
+        <h3>Contoh Aplikasi Kombinatorial dalam Kehidupan Sehari-hari</h3>
+        <p>Kombinatorika memiliki banyak aplikasi praktis, antara lain:</p>
+        <ul>
+            <li><strong>Pengaturan Acara:</strong> Menghitung jumlah cara untuk mengatur kursi dalam sebuah acara.</li>
+            <li><strong>Permainan:</strong> Menghitung kemungkinan kombinasi kartu dalam permainan kartu.</li>
+            <li><strong>Statistika:</strong> Menggunakan kombinatorial untuk analisis data dan pengambilan keputusan.</li>
+            <li><strong>Jaringan Komputer:</strong> Menganalisis kemungkinan jalur dalam jaringan untuk optimasi data.</li>
+        </ul>
+    </div>
+</section>
+
+    <footer class="footer footer-kustom mt-4">
+        <div class="container-fluid" style="padding-left: 14vh; padding-right: 10vh;">
+            <div class="row">
+                <div class="col-md-6 footer-section">
+                    <h5 style="color: white;">Tambahan Referensi</h5>
+                    <ul>
+                        <li><a href="https://kumparan.com/berita-hari-ini/apa-itu-kombinatorika-ini-penjelasan-dan-contoh-soalnya-1yrVJeJCv0n" style="color: rgb(143, 143, 255);">Pengertian Kombinatorial</a></li>
+                        <li><a href="http://elitabmas.wisnuwardhana.ac.id/webmin/assets/uploads/lf/LF202106171623883388461.pdf" style="color: rgb(143, 143, 255);">Kaidah Penjumlahan & Perkalian</a></li>
+                        <li><a href="https://journal.um-surabaya.ac.id/didaktis/article/view/4794/3202" style="color: rgb(143, 143, 255);">Notasi Faktorial</a></li>
+                        <li><a href="http://etheses.uin-malang.ac.id/58268/" style="color: rgb(143, 143, 255);">Koefisien Binomial</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 footer-section text-center" style="color: white;">
+                    <p class="pemutihan" style="color: white;">&copy; 2024 Kombinatorial | Dibuat oleh Kelompok 3 Matematika Diskrit</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

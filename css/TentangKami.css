@@ -1,0 +1,378 @@
+/* Reset margin dan padding untuk memastikan lebar penuh */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden; /* Mencegah scroll horizontal */
+    background-color: #728FCE;
+}
+
+.full-image {
+    width: 100%; /* Gambar full width */
+    max-height: 80vh; /* Batas tinggi agar tidak terlalu besar */
+    object-fit: cover; /* Mempertahankan proporsi */
+    display: block;
+    margin: 0 auto; /* Gambar rata tengah */
+}
+
+.scrollable-section {
+    max-height: 80vh; /* Membatasi tinggi kontainer */
+    overflow-y: auto; /* Scroll vertikal jika konten banyak */
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    transition: transform 0.2s;
+    background-color: #fff;
+    margin: 10px; /* Add margin for spacing between cards */
+}
+
+.profile-card:hover {
+    transform: scale(1.05); /* Efek zoom saat hover */
+}
+
+.profile-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%; /* Membuat gambar bulat */
+}
+
+.profile-card h5 {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.profile-card p {
+    color: gray;
+    margin-bottom: 0;
+}
+
+.row {
+    display: flex;
+    justify-content: center; /* Center the profile cards horizontally */
+    align-items: flex-start; /* Align items at the start vertically */
+}
+
+.footer {
+    background-color: #f8f9fa; /* Warna latar footer */
+    padding: 20px 0;
+    border-top: 1px solid #ddd;
+}
+
+.footer .footer-section {
+    margin-bottom: 20px;
+}
+
+.footer .footer-section h5 {
+    color: #ffffff; /* Warna teks heading footer */
+}
+
+.footer .footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer .footer-section ul li {
+    margin-bottom: 5px;
+}
+
+.footer .footer-section ul li a {
+    text-decoration: none;
+    color: #6c757d; /* Warna teks daftar */
+}
+
+.footer .footer-section ul li a:hover {
+    text-decoration: underline;
+    color: #007bff; /* Warna saat hover */
+}
+
+.footer p {
+    margin: 0;
+    color: #6c757d; /* Warna teks footer */
+}
+
+/* Mengubah warna navbar */
+.navbar-kustom {
+    background-color: #92C7CF; /* Warna biru cerah */
+    color: rgb(0, 0, 0);
+}
+
+.navbar-kustom .navbar-brand,
+.navbar-kustom .nav-link {
+    color: rgb(0, 0, 0);
+}
+
+/* Mengubah warna footer */
+.footer-kustom {
+    background-color: #343a40; /* Warna abu-abu gelap */
+    color: white;
+}
+
+.footer-kustom .container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.footer-kustom a {
+    color: #f8f9fa; /* Warna putih terang */
+}
+
+.footer-kustom a:hover {
+    color: #e9ecef; /* Warna abu-abu terang saat di-hover */
+}
+
+
+
+
+            /*CSS ARIGATO ARIGATOOOO*/
+            /* Section Ucapan Terima Kasih */
+.thank-you-section {
+    background-color: #f8f9fa; /* Warna latar lembut */
+    border: 2px solid #dee2e6; /* Garis border tipis */
+    border-radius: 10px; /* Sudut melengkung */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan halus */
+    margin-top: 30px;
+    padding: 30px; /* Padding dalam */
+    text-align: center; /* Rata tengah */
+}
+
+.thank-you-title {
+    font-size: 2rem; /* Ukuran font besar */
+    font-weight: bold; /* Tebal */
+    color: #007bff; /* Warna biru elegan */
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2); /* Efek bayangan pada judul */
+}
+
+.thank-you-text {
+    font-size: 1.1rem; /* Ukuran font sedang */
+    color: #343a40; /* Warna abu-abu gelap */
+    line-height: 1.8; /* Spasi antar baris */
+    margin-bottom: 15px;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    border-radius: 20px;
+    background-color: #ff511c;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Global Styles */
+body {
+    overflow-x: hidden; /* Mencegah scroll horizontal */
+    background-color: #b2cdff; /* Warna latar belakang */
+    font-family: 'Arial', sans-serif; /* Font keluarga */
+}
+
+/* Full Image */
+.full-image {
+    width: 100%; /* Gambar full width */
+    max-height: 80vh; /* Batas tinggi agar tidak terlalu besar */
+    object-fit: cover; /* Mempertahankan proporsi */
+    display: block;
+    margin: 0 auto; /* Gambar rata tengah */
+}
+
+/* Text Centering */
+h2 {
+    text-align: center;
+}
+
+/* Materi Items */
+.materi-item {
+    background-color: #f8f9fa; /* Warna latar belakang */
+    border: 1px solid #dee2e6; /* Border */
+    border-radius: 10px; /* Sudut melengkung */
+    padding: 15px; /* Padding */
+    margin-bottom: 20px; /* Jarak antar item */
+    text-align: center; /* Rata tengah */
+    transition: transform 0.2s, box-shadow 0.2s ease-in-out; /* Efek transisi */
+}
+
+.materi-item:hover {
+    transform: scale(1.05); /* Efek zoom saat hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Bayangan saat hover */
+}
+
+/* Scrollable Section */
+.scrollable-section {
+    max-height: 80vh; /* Batas tinggi area konten untuk scroll */
+    overflow-y: auto; /* Aktifkan scroll vertikal jika konten melebihi */
+    padding: 10px;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #f8f9fa; /* Warna latar footer */
+    padding: 20px 0;
+    border-top: 1px solid #ddd;
+}
+
+.footer .footer-section {
+    margin-bottom: 20px;
+}
+
+.footer .footer-section h5 {
+    color: #343a40; /* Warna teks heading footer */
+    font-weight: bold; /* Membuat heading footer lebih tebal */
+}
+
+.footer .footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer .footer-section ul li {
+    margin-bottom: 5px;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Vertically align content */
+    text-align: center;
+    height: 100%; /* Ensure parent has full height */
+}
+
+.centered-list {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    text-align: left; /* Left align list text */
+}
+
+/* Custom Footer Colors */
+.footer-kustom {
+    background-color: #343a40; /* Dark gray color */
+    color: white;
+}
+
+.footer-kustom .container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.footer-kustom a {
+    color: #f8f9fa; /* Bright white color */
+    text-decoration: none; /* Menghilangkan garis bawah pada link */
+}
+
+.footer-kustom a:hover {
+    color: #e9ecef; /* Light gray color on hover */
+    text-decoration: underline; /* Garis bawah saat hover */
+}
+
+/* Navbar Customization */
+.navbar-kustom {
+    background-color: #343a40; /* Custom navbar color */
+}
+
+.navbar-kustom .navbar-brand,
+.navbar-kustom .nav-link {
+    color: rgb(255, 255, 255); /* White text color */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Transisi pada warna dan latar belakang */
+}
+
+/* Hover Effect for Navbar Links */
+.navbar-kustom .nav-link:hover {
+    color: #007bff; /* Warna biru saat hover */
+    background-color: rgba(255, 255, 255, 0.1); /* Efek latar belakang transparan saat hover */
+    border-radius: 5px; /* Membulatkan sudut pada link saat hover */
+}
+
+/* Active state for "Tentang Kami" */
+.navbar-kustom .nav-link.active {
+    color: #007bff; /* Warna biru saat link aktif */
+    
+}
+
+/* Dropdown menu item hover */
+.navbar-kustom .dropdown-menu .dropdown-item:hover {
+    background-color: #007bff; /* Latar belakang biru untuk item dropdown */
+    color: white; /* Mengubah warna teks menjadi putih */
+}
+
+/* Carousel Styles */
+.carousel-item {
+    position: relative;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Gradiasi hitam di bagian bawah gambar */
+.carousel-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%; /* Atur tinggi gradiasi sesuai keinginan */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+    z-index: 1; /* Gradiasi berada di bawah teks */
+}
+
+/* Pastikan caption berada di atas gradiasi */
+.carousel-caption {
+    position: absolute;
+    bottom: 0; /* Posisi caption di bawah gambar */
+    left: 0;
+    width: 100%;
+    z-index: 2; /* Teks di atas gradiasi */
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
